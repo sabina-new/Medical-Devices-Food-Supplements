@@ -1,89 +1,251 @@
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-export default function CorporateMedicalConsultingSite() {
-  return (
-    <div className="font-sans bg-slate-50 text-slate-800">
-      {/* HERO */}
-      <section className="bg-gradient-to-r from-teal-700 to-cyan-700 text-white py-24 px-6 text-center">
-        <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-4xl md:text-5xl font-bold mb-6">
-          Consultanță reglementară pentru dispozitive medicale și suplimente alimentare
-        </motion.h1>
-        <p className="max-w-4xl mx-auto text-lg md:text-xl">
-          Servicii specializate de consultanță ANMDMR, autorizare operatori economici, conformitate MDR, PRCR externalizat și suport complet în domeniul dispozitivelor medicale și suplimentelor alimentare.
-        </p>
-      </section>
+  <title>Consultanță ANMDMR | Dispozitive Medicale | PRCR Externalizat</title>
 
-      {/* DE CE NOI */}
-      <section className="max-w-6xl mx-auto py-20 px-6">
-        <h2 className="text-3xl font-semibold text-teal-700 mb-10 text-center">De ce să colaborați cu noi</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {["Farmacist cu experiență >10 ani", "Expertiză dispozitive medicale și MDR", "PRCR certificat și experiență ANMDMR"].map((item, i) => (
-            <motion.div key={i} whileHover={{ scale: 1.05 }} className="bg-white p-8 rounded-2xl shadow">
-              <p className="font-medium">{item}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+  <meta name="description" content="Consultanță ANMDMR pentru autorizare dispozitive medicale, PRCR externalizat, conformitate MDR, audit intern și suport complet pentru operatori economici din România.">
+  <meta name="keywords" content="consultanta ANMDMR, autorizare dispozitive medicale, aviz functionare, PRCR externalizat, conformitate MDR, audit dispozitive medicale, suplimente alimentare">
 
-      {/* SERVICII PRINCIPALE */}
-      <section className="bg-white py-20 px-6">
-        <h2 className="text-3xl font-semibold text-teal-700 mb-12 text-center">Servicii principale – autorizare și conformitate ANMDMR</h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[
-            "Consultanță obținere aviz de funcționare ANMDMR pentru dispozitive medicale",
-            "Pregătire dosar complet de autorizare operator economic",
-            "Evaluare conformitate spații, activități și fluxuri operaționale",
-            "Elaborare proceduri minime obligatorii conform MDR și legislației naționale",
-            "Suport complet în relația cu ANMDMR: clarificări, completări, răspunsuri oficiale"
-          ].map((srv, i) => (
-            <motion.div key={i} whileHover={{ y: -6 }} className="bg-slate-50 p-8 rounded-2xl shadow">
-              <p>{srv}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-      {/* SERVICII RECURENTE */}
-      <section className="py-20 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold text-teal-700 mb-12 text-center">Servicii recurente – suport continuu de conformitate</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            "PRCR externalizat pentru operatori economici din domeniul dispozitivelor medicale",
-            "Mentenanță autorizații și avize ANMDMR",
-            "Audit intern de conformitate reglementară",
-            "Pregătire pentru inspecții și controale oficiale",
-            "Actualizare documentație la modificări legislative MDR / suplimente alimentare"
-          ].map((srv, i) => (
-            <motion.div key={i} whileHover={{ scale: 1.04 }} className="bg-white p-8 rounded-2xl shadow">
-              <p>{srv}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
 
-      {/* SERVICII ADIȚIONALE */}
-      <section className="bg-white py-20 px-6">
-        <h2 className="text-3xl font-semibold text-teal-700 mb-12 text-center">Servicii adiționale</h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[
-            "Training personal – conformitate dispozitive medicale și suplimente alimentare",
-            "Consultanță pentru extinderea activității și diversificarea portofoliului",
-            "Suport în gestionarea neconformităților și CAPA"
-          ].map((srv, i) => (
-            <motion.div key={i} whileHover={{ y: -6 }} className="bg-slate-50 p-8 rounded-2xl shadow">
-              <p>{srv}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+    header {
+      background: linear-gradient(135deg, #0f766e, #0369a1);
+      color: white;
+      padding: 90px 20px;
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
 
-      {/* SEO FOOTER */}
-      <footer className="bg-slate-900 text-slate-200 py-12 px-6 text-center">
-        <p className="max-w-4xl mx-auto text-sm">
-          Consultanță ANMDMR • autorizare dispozitive medicale • aviz funcționare operator economic • PRCR externalizat • conformitate MDR • audit dispozitive medicale • consultanță suplimente alimentare • legislație dispozitive medicale România
-        </p>
-        <p className="mt-4 text-xs">© 2026 Consultanță Dispozitive Medicale. Toate drepturile rezervate.</p>
-      </footer>
+    header h1 {
+      font-size: 44px;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #0f766e;
+      margin-bottom: 50px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      color: #0369a1;
+      font-size: 20px;
+    }
+
+    .why {
+      background: #ffffff;
+      border-radius: 25px;
+      padding: 50px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.07);
+    }
+
+    .why ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .why li {
+      padding: 12px 0;
+      font-weight: 500;
+    }
+
+    .cta {
+      background: #0369a1;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      border-radius: 30px;
+      margin: 80px 20px;
+      animation: fadeUp 1s ease;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 40px;
+      background: white;
+      color: #0369a1;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 999px;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background: #e0f2fe;
+    }
+
+    footer {
+      background: #020617;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 13px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Consultanță reglementară pentru dispozitive medicale și suplimente alimentare</h1>
+  <p>
+    Autorizare operatori economici • Aviz de funcționare ANMDMR • PRCR externalizat •
+    Conformitate MDR • Audit intern • Suport complet în relația cu autoritățile
+  </p>
+</header>
+
+<section>
+  <h2>De ce să colaborați cu noi</h2>
+  <div class="why">
+    <ul>
+      <li>✔ Farmacist cu peste 10 ani experiență profesională</li>
+      <li>✔ Peste 6 ani experiență în dispozitive medicale</li>
+      <li>✔ PRCR certificat – experiență directă cu ANMDMR</li>
+      <li>✔ Abordare clară, legală și orientată pe rezultate</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Servicii principale – autorizare și conformitate ANMDMR</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1580281658629-98c86f3e7b57" alt="Aviz ANMDMR">
+      <div class="card-content">
+        <h3>Aviz de funcționare ANMDMR</h3>
+        <p>Consultanță completă pentru obținerea avizului de funcționare pentru optici medicale, centre de audiometrie, distribuitori și alți operatori economici.</p>
+      </div>
     </div>
-  );
-}
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581091012184-5c7f9c1a1b3b" alt="Dosar autorizare">
+      <div class="card-content">
+        <h3>Dosar complet de autorizare</h3>
+        <p>Pregătirea și verificarea documentației complete, conform legislației naționale și Regulamentului (UE) MDR.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581092334391-6f7f8d6b8c52" alt="Conformitate">
+      <div class="card-content">
+        <h3>Evaluare conformitate</h3>
+        <p>Analiza spațiilor, activităților și fluxurilor operaționale înainte de autorizare sau control ANMDMR.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Servicii recurente</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1603398938378-e6d5cba7d3e3" alt="PRCR">
+      <div class="card-content">
+        <h3>PRCR externalizat</h3>
+        <p>Asigurarea rolului de Persoană Responsabilă cu Conformitatea Reglementară pentru operatori economici.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581093588401-22a4b8c4c3f4" alt="Audit">
+      <div class="card-content">
+        <h3>Audit intern de conformitate</h3>
+        <p>Identificarea neconformităților și pregătirea pentru inspecții și controale oficiale.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581091870627-3b76a2c9f14b" alt="Legislatie">
+      <div class="card-content">
+        <h3>Actualizare legislativă</h3>
+        <p>Monitorizare și actualizare documentație la modificări MDR și cerințe ANMDMR.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta">
+  <h2>Evaluare inițială gratuită</h2>
+  <p>Analizăm situația ta reglementară și îți oferim pașii necesari pentru conformitate.</p>
+  <a href="mailto:contact@consultantamedicala.ro">Solicită consultanță</a>
+</div>
+
+<footer>
+  Consultanță ANMDMR • Autorizare dispozitive medicale • PRCR externalizat •
+  Conformitate MDR • Audit intern • Suplimente alimentare • România<br>
+  © 2026 Toate drepturile rezervate
+</footer>
+
+</body>
+</html>
